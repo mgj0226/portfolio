@@ -2,7 +2,15 @@ import {Box, Flex} from "@chakra-ui/react";
 
 function Footer() {
     return(
-        <Box bg= "#18181b">
+        <Box
+            bg= "#18181b"
+            style={{
+                position: "fixed",
+                bottom: "0",
+                width: "100%",
+            
+            }}
+        >
             <footer>
                 <Flex
                     margin="0 auto"

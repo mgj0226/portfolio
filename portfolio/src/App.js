@@ -1,5 +1,7 @@
-import {ChakraProvider} from "@chakra-ui/react";
-import ScrollToTopButton from "./components/ScollToTopButton";
+import {Box, ChakraProvider} from "@chakra-ui/react";
+import ScrollToTopButton from "./buttons/ScollToTopButton";
+import Footer from "./components/Footer";
+import "./App.css"
 
 function App() {
   return (
@@ -11,9 +13,11 @@ function App() {
         <OtherSkills/>
         <Experiences/>
         <Cert/>
-        <Projects/>
-        <Footer/> */}
-        <ScrollToTopButton/>
+        <Projects/> */}
+        <Box>
+          <ScrollToTopButton/>
+        </Box>
+        <Footer/>
       </main>
     </ChakraProvider>
   );
