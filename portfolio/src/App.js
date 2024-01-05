@@ -11,6 +11,7 @@ function App() {
         <Experiences/>
         <Cert/>
         <Projects/>
+        <Footer/>
       </main>
     </ChakraProvider>
   );
