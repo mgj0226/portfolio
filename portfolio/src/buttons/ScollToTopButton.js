@@ -23,7 +23,7 @@ const ScrollToTopButton = ()=> {
                     height: "50px",
                     position: "fixed",
                     right: "30px",
-                    bottom: "100px",
+                    bottom: "25px",
                     color: "white",
                 }}
             >
@@ -34,7 +34,8 @@ const ScrollToTopButton = ()=> {
                 style={{
                     position:"fixed",
                     right:"20px",
-                    bottom:"70px",
+                    bottom:"5px",
+                    color:"white",
                 }}
                 
             >Back to Top</p>

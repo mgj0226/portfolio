@@ -21,7 +21,7 @@
     display: 'flex';
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    /* background-color: lightblue; */
   }
   .animatedButton:hover .faArrowUp {
     animation: moveIcon 1.5s linear infinite;

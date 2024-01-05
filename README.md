@@ -11,7 +11,7 @@ Icon of myself and introduction
 Skills:
 most related skills on programming
 
-other skills:
+other skills(inside Skills):
 other skills I have for working as a team
 
 Employment History:

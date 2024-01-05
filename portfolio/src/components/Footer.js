@@ -1,9 +1,10 @@
 import {Box, Flex} from "@chakra-ui/react";
+import ScrollToTopButton from "../buttons/ScollToTopButton";
 
 function Footer() {
     return(
         <Box
-            bg= "#18181b"
+            bg= "#001840"
             style={{
                 position: "fixed",
                 bottom: "0",
@@ -19,9 +20,10 @@ function Footer() {
                     justifyContent="center"
                     alignItems="center"
                     maxWidth=""
-                    height={16}
+                    height={20}
                 >
-                    <p>Michael • © 2024</p>
+                    <Box fontSize="lg">Michael • © 2024</Box>
+                    <ScrollToTopButton/>
                 </Flex>
             </footer>
         </Box>
