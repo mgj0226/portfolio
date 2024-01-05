@@ -1,17 +1,19 @@
 import {ChakraProvider} from "@chakra-ui/react";
+import ScrollToTopButton from "./components/ScollToTopButton";
 
 function App() {
   return (
     <ChakraProvider>
       <main>
-        <Header/>
+        {/* <Header/>
         <Profile/>
         <Skills/>
         <OtherSkills/>
         <Experiences/>
         <Cert/>
         <Projects/>
-        <Footer/>
+        <Footer/> */}
+        <ScrollToTopButton/>
       </main>
     </ChakraProvider>
   );
