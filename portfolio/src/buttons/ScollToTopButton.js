@@ -1,7 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons';
 import './Buttons.css';
+import {ReactComponent as ArrowIcon} from '../images/keyboard_arrow_up.svg';
 
 const ScrollToTopButton = ()=> {
     const scrollToTop = () => {
@@ -27,7 +28,12 @@ const ScrollToTopButton = ()=> {
                     color: "white",
                 }}
             >
-                    <FontAwesomeIcon className="faArrowUp" icon={faArrowTurnUp}/>
+                <ArrowIcon
+                    className="ArrowIcon"
+                    width="50px"
+                    height="50px"
+                    fill="white"
+                />
             </button>
             <p
                 className="BackToTop"

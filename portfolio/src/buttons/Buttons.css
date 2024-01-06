@@ -1,29 +1,29 @@
+.animatedButton{
+  padding: '10px';
+  display: 'flex';
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightblue; */
+}
+.animatedButton .ArrowIcon:hover {
+  animation: moveIcon 1.5s linear infinite;
+}
+
+
 @keyframes moveIcon {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-5px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    75% {
-      transform: translateY(5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
   }
-  
-  .animatedButton{
-    padding: '10px';
-    display: 'flex';
-    justify-content: center;
-    align-items: center;
-    /* background-color: lightblue; */
+  25% {
+    transform: translateY(-5px);
+    opacity: 0;
   }
-  .animatedButton:hover .faArrowUp {
-    animation: moveIcon 1.5s linear infinite;
+  26% {
+    transform: translateY(5px);
+    opacity: 0;
   }
-  
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
