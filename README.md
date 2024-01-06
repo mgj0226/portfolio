@@ -1,11 +1,13 @@
 # portfolio
  My portfolio
+**Have to choose which components to always be and which components will switch around.
+**A better background.
 
 Header:
 nav and links to my LinkedIn profile, email and other websites about me
 **Try to create a hover pop up list
 
-Profile:
+About:
 Icon of myself and introduction
 
 Skills:
@@ -22,3 +24,6 @@ All the Certificates I have
 
 Projects:
 Projects I created
+
+Footer:
+My name and a back to top button
