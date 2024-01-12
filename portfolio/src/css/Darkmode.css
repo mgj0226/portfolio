@@ -1,0 +1,82 @@
+.dark .header {
+  background-color: #00072D;
+  color: white;
+}
+
+.dark .about {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  margin-top: 100px;
+}
+.dark .aboutTitle {
+  color: black;
+}
+.dark .aboutText {
+  color: black;
+}
+
+.dark .footer {
+  background-color: #00072D;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: large;
+  color: white;
+}
+.dark .footerFlex {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.dark .footerName {
+  justify-content: center;
+  align-items: center;
+}
+.dark .footer .animatedButton {
+  padding: "10px";
+  display: "flex";
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  right: 30px;
+  bottom: 25px;
+  color: white;
+}
+.dark .footer .animatedButton .ArrowIcon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+}
+.dark .footer .animatedButton .ArrowIcon:hover {
+  animation: moveIcon 1.5s linear infinite;
+}
+.dark .footer .BackToTop {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  26% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Darkmode.css.map */

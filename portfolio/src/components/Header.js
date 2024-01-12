@@ -4,6 +4,7 @@ import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Link } from "@chakra-ui/react";
+// import Switch from "../buttons/Switch";
 
 const links = [
     {
@@ -86,10 +87,9 @@ const Header = () => {
           transitionProperty="transform"
           transitionDuration=".3s"
           transitionTimingFunction="ease-in-out"
-          backgroundColor="#001840"
           zIndex={10}
         >
-          <Box color="white" maxWidth="1280px" margin="0 auto">
+          <Box maxWidth="1280px" margin="0 auto">
             <HStack
               px={16}
               py={2}
@@ -122,6 +122,7 @@ const Header = () => {
                     <Link href="/#cert" onClick={handleClick('cert')} fontSize="lg">Certifications</Link>
                     <Link href="/#projects" onClick={handleClick('projects')} fontSize="lg">Projects</Link>
                 </HStack>
+                {/* <Switch/> */}
               </nav>
             </HStack>
           </Box>

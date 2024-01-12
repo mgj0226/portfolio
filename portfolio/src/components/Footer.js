@@ -3,28 +3,14 @@ import ScrollToTopButton from "../buttons/ScollToTopButton";
 
 function Footer() {
     return(
-        <Box
-            bg= "#001840"
-            style={{
-                position: "fixed",
-                bottom: "0",
-                width: "100%",
-            
-            }}
-        >
+        <Box className="footer">
             <footer>
                 <Flex
-                    margin="0 auto"
-                    px={12}
-                    color='white'
-                    justifyContent="center"
-                    alignItems="center"
-                    maxWidth=""
-                    height={20}
+                    className="footerFlex"
                 >
-                    <Box fontSize="lg">Michael • © 2024</Box>
-                    <ScrollToTopButton/>
-                </Flex>
+                    <Box className="footerName">Michael • © 2024</Box>
+                    
+                </Flex><ScrollToTopButton/>
             </footer>
         </Box>
     )
