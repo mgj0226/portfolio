@@ -23,16 +23,31 @@ function MainComponent() {
   const {theme} = useTheme();
   const switchRef = useRef(null);
   const mainRef = useRef(null);
+  const aboutTitleRef = useRef(null);
+  const aboutSubTitle1Ref = useRef(null);
+  const aboutSubTitle2Ref = useRef(null);
 
   useEffect(() => {
     const handleClick = () => {
       if (theme === 'light') {
         mainRef.current.classList.remove ('mainBgLight');
         mainRef.current.classList.add ('mainBgDark');
+        aboutTitleRef.current.classList.remove ('transAboutTitleDark');
+        aboutTitleRef.current.classList.add ('transAboutTitleLight');
+        aboutSubTitle1Ref.current.classList.remove ('transAboutSubTitleDark');
+        aboutSubTitle1Ref.current.classList.add ('transAboutSubTitleLight');
+        aboutSubTitle2Ref.current.classList.remove ('transAboutSubTitleDark');
+        aboutSubTitle2Ref.current.classList.add ('transAboutSubTitleLight');
   
       } else if (theme === 'dark') {
         mainRef.current.classList.remove ('mainBgDark');
         mainRef.current.classList.add ('mainBgLight');
+        aboutTitleRef.current.classList.remove ('transAboutTitleLight');
+        aboutTitleRef.current.classList.add ('transAboutTitleDark');
+        aboutSubTitle1Ref.current.classList.remove ('transAboutSubTitleLight');
+        aboutSubTitle1Ref.current.classList.add ('transAboutSubTitleDark');
+        aboutSubTitle2Ref.current.classList.remove ('transAboutSubTitleLight');
+        aboutSubTitle2Ref.current.classList.add ('transAboutSubTitleDark');
       }
     };
 
@@ -47,7 +62,11 @@ function MainComponent() {
     <main ref={mainRef}>
       <Header/>
       <Switch ref={switchRef}/>
-      <About/>
+      <About
+        aboutTitleRef={aboutTitleRef}
+        aboutSubTitle1Ref={aboutSubTitle1Ref}
+        aboutSubTitle2Ref={aboutSubTitle2Ref}
+      />
       {/* <Skills/> */}
       {/* <Cert/> */}
       {/* <Experiences/> */}
