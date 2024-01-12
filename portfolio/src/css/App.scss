@@ -6,18 +6,18 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/darkBg1.jpg);
+    // background-image: url(../images/lightBg2.jpg);
     background-size:cover;
     background-position: center;
-    animation: mainBgChange 3s ease-in forwards;
+    animation: mainBgLight1 2s ease-in forwards;
 }
 
-.light .header {
+main .header {
     background-color: $light-primary-color;
     color: $light-text-color;
 }
 
-.light .about {
+main .about {
     display: flex;
     justify-content: center;
     margin-top: 70px;
@@ -25,29 +25,29 @@ main {
     &Img {
         height: 200px;
         width: 200px;
-        animation: transAboutImg 3s ease-in forwards;
+        animation: transAboutImg 2s ease-in forwards;
     }
 
     &Title {
         color: $dark-text-color;
         font: bolder;
-        animation: transAboutTitle 3s ease-in forwards;
+        animation: transAboutTitle 2s ease-in forwards;
     }
 
     &SubTitle1 {
         color: $dark-text-color;
         margin-right: 200px;
-        animation: transAboutSubTitle1 3s ease-in forwards;
+        animation: transAboutSubTitle1 2s ease-in forwards;
     }
 
     &SubTitle2 {
         color: $dark-text-color;
         margin-left: 200px;
-        animation: transAboutSubTitle2 3s ease-in forwards;
+        animation: transAboutSubTitle2 2s ease-in forwards;
     }
 }
 
-.light .footer {
+main .footer {
     background-color: $light-primary-color;
     position: fixed;
     bottom: 0;
@@ -99,87 +99,179 @@ main {
       }
 }
 
-@keyframes mainBgChange {
-    0% {
-      background-image: url(../images/darkBg1.jpg);
-    }
-    50%{
-        opacity: 1;
-    }
-    75% {
-        background-image: url(../images/darkBg1.jpg);
-        opacity: 0;
-    }
-  
-    100% {
-        opacity: 1;
-      background-image: url(../images/lightBg3.1.jpg);
-    }
+.mainBgLight {
+    animation: mainBgLight 1s ease-in forwards;
+}
+
+.mainBgDark {
+    animation: mainBgDark 1s ease-in forwards;
+}
+
+.transAboutTitleLight {
+    animation: transAboutTitleLight 1s ease-in forwards;
+}
+
+.transAboutTitleDark {
+    animation: transAboutTitleDark 1s ease-in forwards;
+}
+
+.transAboutSubTitleLight {
+    animation: transAboutSubTitleLight 1s ease-in forwards;
+}
+
+.transAboutSubTitleDark {
+    animation: transAboutSubTitleDark 1s ease-in forwards;
+}
+
+@keyframes mainBgLight1 {
+  0%, 50% {
+    background-image: url(../images/darkBg1.jpg);
+    opacity: 1;
   }
+  70% {
+      background-image: url(../images/darkBg1.jpg);
+      opacity: 0;
+      scale: 1.1;
+  }
+
+  75% {
+    background-image: url(../images/lightBg2.jpg);
+    opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+    background-image: url(../images/lightBg2.jpg);
+  }
+}
 
 @keyframes transAboutImg {
-    0%, 50% {
+  0%, 50% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+    transform: translate3d(-340%, 30%, 0) scale(0.5);
+  }
+}
+
+@keyframes transAboutTitle {
+  0%, 50% {
       transform: none;
       opacity: 1;
+      text-shadow: 0 0 7px $light-text-color;
     }
     75% {
         opacity: 0;
+        color: $dark-text-color;
     }
     100% {
-      transform: translate3d(-340%, 30%, 0) scale(0.5);
+      transform: translate3d(-515%, -350%, 0) scale(0.7);
+      color: $light-secondaryText-color;
+      text-shadow: 0 0 7px $dark-text-color;
+    }
+}
+
+@keyframes transAboutSubTitle1 {
+  0%, 50% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 0 0 7px $light-text-color;
+    }
+    75% {
+        opacity: 0;
+        color: $dark-text-color;
+    }
+    100% {
+      transform: translate3d(-199%, -680%, 0) scale(0.7);
+      color: $light-secondaryText-color;
+      text-shadow: 0 0 7px $dark-text-color;
+    }
+}
+
+@keyframes transAboutSubTitle2 {
+  0%, 50% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 0 0 7px $light-text-color;
+    }
+    75% {
+        opacity: 0;
+        color: $dark-text-color;
+    }
+    100% {
+      transform: translate3d(-445%, -720%, 0) scale(0.7);
+      color: $light-secondaryText-color;
+      text-shadow: 0 0 7px $dark-text-color;
+    }
+}
+
+@keyframes mainBgLight {
+    0% {
+      background-image: url(../images/darkBg3.jpg);
+      opacity: 1;
+    }
+    50% {
+        background-image: url(../images/darkBg3.jpg);
+        opacity: 0;
+    }
+
+    55% {
+      background-image: url(../images/lightBg2.jpg);
+      opacity: 0;
+    }
+  
+    100% {
+        opacity: 1;
+      background-image: url(../images/lightBg2.jpg);
     }
   }
 
-@keyframes transAboutTitle {
-    0%, 50% {
-        transform: none;
+@keyframes mainBgDark {
+    0% {
+      background-image: url(../images/lightBg2.jpg);
+      opacity: 1;
+    }
+    50% {
+        background-image: url(../images/lightBg2.jpg);
+        opacity: 0;
+    }
+
+    55% {
+      background-image: url(../images/darkBg3.jpg);
+      opacity: 0;
+    }
+  
+    100% {
         opacity: 1;
-        text-shadow: 0 0 7px $light-text-color;
-      }
-      75% {
-          opacity: 0;
-          color: $dark-text-color;
-      }
-      100% {
-        transform: translate3d(-515%, -350%, 0) scale(0.7);
-        color: $light-secondaryText-color;
-        text-shadow: 0 0 7px $dark-text-color;
-      }
+      background-image: url(../images/darkBg3.jpg);
+    }
   }
 
-@keyframes transAboutSubTitle1 {
-    0%, 50% {
-        transform: none;
-        opacity: 1;
-        text-shadow: 0 0 7px $light-text-color;
-      }
-      75% {
-          opacity: 0;
-          color: $dark-text-color;
-      }
-      100% {
-        transform: translate3d(-199%, -680%, 0) scale(0.7);
-        color: $light-secondaryText-color;
-        text-shadow: 0 0 7px $dark-text-color;
-      }
+@keyframes transAboutTitleDark {
+  from {
+    color: $dark-text-color;
+    text-shadow: 0 0 7px $light-secondaryText-color;
   }
-  
-  @keyframes transAboutSubTitle2 {
-    0%, 50% {
-        transform: none;
-        opacity: 1;
-        text-shadow: 0 0 7px $light-text-color;
-      }
-      75% {
-          opacity: 0;
-          color: $dark-text-color;
-      }
-      100% {
-        transform: translate3d(-445%, -720%, 0) scale(0.7);
-        color: $light-secondaryText-color;
-        text-shadow: 0 0 7px $dark-text-color;
-      }
+  to {
+    color: $light-secondaryText-color;
+    text-shadow: 0 0 7px $dark-text-color;
   }
+}
+
+@keyframes transAboutTitleLight {
+  from {
+    color: $light-secondaryText-color;
+    text-shadow: 0 0 7px $dark-text-color;
+  }
+  to {
+    color: $dark-text-color;
+    text-shadow: 0 0 7px $light-secondaryText-color;
+  }
+}
 
 @keyframes moveIcon {
     0% {
