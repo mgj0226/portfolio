@@ -1,3 +1,4 @@
+import React, {useEffect, useRef} from "react";
 import {ChakraProvider} from "@chakra-ui/react";
 import { ThemeProvider, useTheme } from './ThemeContext';
 import Footer from "./components/Footer";
@@ -20,12 +21,32 @@ function App() {
 
 function MainComponent() {
   const {theme} = useTheme();
-  const classTheme = theme;
+  const switchRef = useRef(null);
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    const handleClick = () => {
+      if (theme === 'light') {
+        mainRef.current.classList.remove ('mainBgLight');
+        mainRef.current.classList.add ('mainBgDark');
+  
+      } else if (theme === 'dark') {
+        mainRef.current.classList.remove ('mainBgDark');
+        mainRef.current.classList.add ('mainBgLight');
+      }
+    };
+
+    switchRef.current.addEventListener('click', handleClick);
+
+    return () => {
+      switchRef.current.removeEventListener('click', handleClick);
+    };
+  }, [theme]);
 
   return (
-    <main className={classTheme}>
+    <main ref={mainRef}>
       <Header/>
-      <Switch />
+      <Switch ref={switchRef}/>
       <About/>
       {/* <Skills/> */}
       {/* <Cert/> */}

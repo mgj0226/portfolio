@@ -1,10 +1,10 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, forwardRef} from "react";
 import "./Switch.css";
 import { useTheme } from "../ThemeContext";
 
-const Switch = () => {
+const Switch = forwardRef((props, ref) => {
   const { theme, toggleTheme } = useTheme();
-  const switchRef = useRef(null);
+  // const switchRef = useRef(null);
   const lightBaseRef = useRef(null);
   const sunRef = useRef(null);
   const moonRef = useRef(null);
@@ -29,16 +29,16 @@ const Switch = () => {
     }
   };
 
-  switchRef.current.addEventListener('click', handleClick);
+  ref.current.addEventListener('click', handleClick);
 
   // Clean up function to remove the event listener when the component unmounts
   return () => {
-    switchRef.current.removeEventListener('click', handleClick);
+    ref.current.removeEventListener('click', handleClick);
   };
-}, [theme]);
+}, [theme, ref]);
 
  return (
-   <label className="switch" ref={switchRef}>
+   <label className="switch" ref={ref}>
      <input
        type="checkbox"
        id="toggle"
@@ -71,6 +71,6 @@ const Switch = () => {
 
    </label>
  );
-};
+});
 
 export default Switch;
