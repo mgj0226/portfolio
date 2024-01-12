@@ -1,4 +1,4 @@
-import { Avatar, Heading, VStack, Box, Card } from "@chakra-ui/react";
+import { Avatar, Heading, VStack, Card } from "@chakra-ui/react";
 
 const About = () => {
     return(
