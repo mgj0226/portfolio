@@ -35,7 +35,7 @@
 }
 
 .sunOut {
-  animation: sunOut 1s ease-in-out forwards;
+  animation: sunOut 0.7s ease-in-out forwards;
   transform-origin: center;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .moonOut {
-  animation: moonOut 1s ease-in-out forwards;
+  animation: moonOut 0.7s ease-in-out forwards;
   transform-origin: center;
 }
 
@@ -61,13 +61,13 @@
   }
   to {
     opacity: 0;
-    transform: rotate(270deg) translateX(14px);
+    transform: rotate(180deg) translateX(14px);
   }
 }
 @keyframes sunIn {
   from {
     opacity: 0;
-    transform: rotate(270deg) translateX(14px);
+    transform: rotate(-180deg) translateX(14px);
   }
   to {
     opacity: 1;
@@ -81,13 +81,13 @@
   }
   to {
     opacity: 0;
-    transform: rotate(-270deg) translateX(14px);
+    transform: rotate(180deg) translateX(14px);
   }
 }
 @keyframes moonIn {
   from {
     opacity: 0;
-    transform: rotate(-270deg) translateX(14px);
+    transform: rotate(-180deg) translateX(14px);
   }
   to {
     opacity: 1;
