@@ -32,11 +32,11 @@ function MainComponent() {
       if (theme === 'light') {
         mainRef.current.classList.remove ('mainBgLight');
         mainRef.current.classList.add ('mainBgDark');
-        aboutTitleRef.current.classList.remove ('transAboutTitleDark');
+        aboutTitleRef.current.classList.remove ('transAboutTitleDark', 'aboutTitleAni');
         aboutTitleRef.current.classList.add ('transAboutTitleLight');
-        aboutSubTitle1Ref.current.classList.remove ('transAboutSubTitleDark');
+        aboutSubTitle1Ref.current.classList.remove ('transAboutSubTitleDark', 'aboutSubTitleAni1');
         aboutSubTitle1Ref.current.classList.add ('transAboutSubTitleLight');
-        aboutSubTitle2Ref.current.classList.remove ('transAboutSubTitleDark');
+        aboutSubTitle2Ref.current.classList.remove ('transAboutSubTitleDark', 'aboutSubTitleAni2');
         aboutSubTitle2Ref.current.classList.add ('transAboutSubTitleLight');
   
       } else if (theme === 'dark') {

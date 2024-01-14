@@ -116,11 +116,36 @@ const Header = () => {
               </nav>
               <nav>
                 <HStack spacing={8}>
-                    <Link href="/#about" onClick={handleClick('about')} fontSize="lg">About Me</Link>
-                    <Link href="/#skills" onClick={handleClick('skills')} fontSize="lg">Skills</Link>
-                    <Link href="/#experiences" onClick={handleClick('experiences')} fontSize="lg">Experiences</Link>
-                    <Link href="/#cert" onClick={handleClick('cert')} fontSize="lg">Certifications</Link>
-                    <Link href="/#projects" onClick={handleClick('projects')} fontSize="lg">Projects</Link>
+                    <Link
+                      href="/#about"
+                      onClick={handleClick('about')}
+                      fontSize="lg"
+                      _hover={{ transform: 'scale(1.1)' }}
+                    >About Me</Link>
+                    <Link
+                      href="/#skills"
+                      onClick={handleClick('skills')}
+                      fontSize="lg"
+                      _hover={{ transform: 'scale(1.1)' }}
+                    >Skills</Link>
+                    <Link
+                      href="/#experiences"
+                      onClick={handleClick('experiences')}
+                      fontSize="lg"
+                      _hover={{ transform: 'scale(1.1)' }}
+                    >Experiences</Link>
+                    <Link
+                      href="/#cert"
+                      onClick={handleClick('cert')}
+                      fontSize="lg"
+                      _hover={{ transform: 'scale(1.1)' }}
+                    >Certifications</Link>
+                    <Link
+                      href="/#projects"
+                      onClick={handleClick('projects')}
+                      fontSize="lg"
+                      _hover={{ transform: 'scale(1.1)' }}
+                    >Projects</Link>
                 </HStack>
                 {/* <Switch/> */}
               </nav>

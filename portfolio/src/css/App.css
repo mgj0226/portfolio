@@ -27,18 +27,29 @@ main .aboutImg {
   animation: transAboutImg 2s ease-in forwards;
 }
 main .aboutTitle {
-  color: white;
-  font: bolder;
+  transform: translate3d(-515%, -350%, 0) scale(0.7);
+  color: #00072D;
+  text-shadow: 0 0 7px white;
+}
+main .aboutTitleAni {
   animation: transAboutTitle 2s ease-in forwards;
 }
 main .aboutSubTitle1 {
-  color: white;
   margin-right: 200px;
+  transform: translate3d(-199%, -680%, 0) scale(0.7);
+  color: #00072D;
+  text-shadow: 0 0 7px white;
+}
+main .aboutSubTitleAni1 {
   animation: transAboutSubTitle1 2s ease-in forwards;
 }
 main .aboutSubTitle2 {
-  color: white;
+  transform: translate3d(-445%, -720%, 0) scale(0.7);
+  color: #00072D;
+  text-shadow: 0 0 7px white;
   margin-left: 200px;
+}
+main .aboutSubTitleAni2 {
   animation: transAboutSubTitle2 2s ease-in forwards;
 }
 
@@ -148,6 +159,7 @@ main .footer .BackToTop {
   0%, 30% {
     transform: none;
     opacity: 1;
+    color: white;
     text-shadow: 0 0 7px black;
   }
   55% {
@@ -164,6 +176,7 @@ main .footer .BackToTop {
   0%, 30% {
     transform: none;
     opacity: 1;
+    color: white;
     text-shadow: 0 0 7px black;
   }
   55% {
@@ -181,6 +194,7 @@ main .footer .BackToTop {
     transform: none;
     opacity: 1;
     text-shadow: 0 0 7px black;
+    color: white;
   }
   55% {
     opacity: 0;
