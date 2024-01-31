@@ -1,0 +1,15 @@
+<svg width="495" height="495" viewBox="0 0 495 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="wolfLogo1">
+<path id="bg" d="M143.35 104.15L351.65 104.15L416.018 302.255L247.5 424.69L78.9819 302.255L143.35 104.15Z" fill="black"/>
+<g id="wolf">
+<line id="Line 15" x1="187.666" y1="159.889" x2="136.598" y2="254.642" stroke="white" stroke-width="30.7642"/>
+<line id="Line 18" x1="357.471" y1="254.644" x2="306.407" y2="159.888" stroke="white" stroke-width="30.7642"/>
+<line id="Line 19" x1="138.133" y1="263.116" x2="311.028" y2="140.059" stroke="white" stroke-width="30.7642"/>
+<line id="Line 20" x1="183.045" y1="140.058" x2="355.942" y2="263.112" stroke="white" stroke-width="30.7642"/>
+<line id="Line 16" x1="240.228" y1="370.132" x2="135.014" y2="237.846" stroke="white" stroke-width="30.7642"/>
+<line id="Line 17" x1="359.066" y1="237.846" x2="253.845" y2="370.127" stroke="white" stroke-width="30.7642"/>
+<path id="Polygon 6" d="M234.49 280.513L193.884 275.208L206.875 250.275L234.49 280.513Z" fill="white"/>
+<path id="Polygon 7" d="M259.767 280.514L287.382 250.275L300.373 275.208L259.767 280.514Z" fill="white"/>
+</g>
+</g>
+</svg>
