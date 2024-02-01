@@ -12,6 +12,10 @@
   width: 0;
   height: 0;
 }
+.DarkModeSwitch:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 .MenuBtn {
   position: absolute;
@@ -26,10 +30,8 @@
   width: 0;
   height: 0;
 }
-
-.DarkModeSwitch:hover {
-  opacity: 1;
-  transform: scale(1.1);
+.MenuBtn:hover {
+  animation: rainbowShadow 0.7s infinite;
 }
 
 .fadeOut {
@@ -56,5 +58,40 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes rainbowShadow {
+  0% {
+    filter: drop-shadow(-2px 2px 3px #000000);
+  }
+  10% {
+    filter: drop-shadow(-2px 0px 3px #ff0000);
+  }
+  20% {
+    filter: drop-shadow(0px 0px 3px #ff7f00);
+  }
+  30% {
+    filter: drop-shadow(0px -2px 3px #ffff00);
+  }
+  40% {
+    filter: drop-shadow(2px -2px 3px #00ff00);
+  }
+  50% {
+    filter: drop-shadow(2px 0px 3px #0000ff);
+  }
+  60% {
+    filter: drop-shadow(2px 2px 3px #4b0082);
+  }
+  70% {
+    filter: drop-shadow(0px 2px 3px #9400d3);
+  }
+  80% {
+    filter: drop-shadow(-2px 2px 3px #ee82ee);
+  }
+  90% {
+    filter: drop-shadow(-2px 2px 3px #ff1493);
+  }
+  100% {
+    filter: drop-shadow(-2px 2px 3px #000000);
   }
 }/*# sourceMappingURL=buttons.css.map */
