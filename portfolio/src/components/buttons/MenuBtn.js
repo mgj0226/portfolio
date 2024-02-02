@@ -1,6 +1,6 @@
 import './buttons.css';
 
-const MenuBtn = ({menuBtnLightRef}) => {
+const MenuBtn = ({menuBtnLightRef, menuBtnDarkRef}) => {
     const syncPointer = ({ x: pointerX, y: pointerY }) => {
         const x = pointerX.toFixed(2);
         const y = pointerY.toFixed(2);
@@ -17,7 +17,7 @@ const MenuBtn = ({menuBtnLightRef}) => {
         <>
             <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="menuBtn">
-                <g id="menuBtnDark">
+                <g id="menuBtnDark" ref={menuBtnDarkRef}>
                 <circle id="base" cx="50" cy="50" r="50" fill="#1E1E1E"/>
                 <g id="lines" filter="url(#filter0_d_9_20)">
                 <path id="Line 21" d="M25 50H75" stroke="white" stroke-width="5" stroke-linecap="round"/>

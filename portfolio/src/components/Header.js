@@ -5,7 +5,9 @@ import DarkModeSwitch from "./buttons/darkModeSwitch3";
 const Header = ({theme, setTheme}) => {
     const [menuOpen, setMenuOpen] = useState('closed');
     const sunRef = useRef(null);
+    const moonRef = useRef(null);
     const menuBtnLightRef = useRef(null);
+    const menuBtnDarkRef = useRef(null);
 
     const toggleMenu = () => {
         if (menuOpen === 'closed') {
@@ -20,14 +22,22 @@ const Header = ({theme, setTheme}) => {
             setTheme('dark');
             sunRef.current.classList.remove ('fadeIn');
             sunRef.current.classList.add ('fadeOut');
+            moonRef.current.classList.remove ('fadeOut');
+            moonRef.current.classList.add ('fadeIn');
             menuBtnLightRef.current.classList.remove ('fadeIn');
             menuBtnLightRef.current.classList.add ('fadeOut');
+            menuBtnDarkRef.current.classList.remove ('fadeOut');
+            menuBtnDarkRef.current.classList.add ('fadeIn');
         } else {
             setTheme('light');
             sunRef.current.classList.remove ('fadeOut');
             sunRef.current.classList.add ('fadeIn');
+            moonRef.current.classList.remove ('fadeIn');
+            moonRef.current.classList.add ('fadeOut');
             menuBtnLightRef.current.classList.remove ('fadeOut');
             menuBtnLightRef.current.classList.add ('fadeIn');
+            menuBtnDarkRef.current.classList.remove ('fadeIn');
+            menuBtnDarkRef.current.classList.add ('fadeOut');
         }
       }
 
@@ -39,7 +49,10 @@ const Header = ({theme, setTheme}) => {
                 id="toggle"
                 checked={menuOpen ==="open"}
                 onChange={toggleMenu}/>
-            <MenuBtn theme={theme} menuBtnLightRef={menuBtnLightRef}/></label>
+            <MenuBtn
+              theme={theme}
+              menuBtnLightRef={menuBtnLightRef}
+              menuBtnDarkRef={menuBtnDarkRef}/></label>
             <label className="DarkModeSwitch">
             <input
                 type="checkbox"
@@ -49,7 +62,8 @@ const Header = ({theme, setTheme}) => {
                 <DarkModeSwitch
                 className="darkModeSwitch"
                 theme={theme}
-                sunRef={sunRef}/></label>
+                sunRef={sunRef}
+                moonRef={moonRef}/></label>
         </section>
     )
 };
