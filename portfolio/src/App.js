@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import logo from './assets/wolfLogo1.svg';
+import logo from './assets/wolfLogo2.svg';
 import MenuBtn from "./components/buttons/MenuBtn";
 import DarkModeSwitch from "./components/buttons/darkModeSwitch3";
 import './App.css';
