@@ -17,29 +17,44 @@ const Header = ({theme, setTheme}) => {
         }
       }
 
+
+      const lights = {
+          sun: sunRef,
+          menuBtnLight: menuBtnLightRef,
+        }
+      const darks = {
+          moon: moonRef,
+          menuBtnDark: menuBtnDarkRef
+        }
+
+
       const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
-            sunRef.current.classList.remove ('fadeIn');
-            sunRef.current.classList.add ('fadeOut');
-            moonRef.current.classList.remove ('fadeOut');
-            moonRef.current.classList.add ('fadeIn');
-            menuBtnLightRef.current.classList.remove ('fadeIn');
-            menuBtnLightRef.current.classList.add ('fadeOut');
-            menuBtnDarkRef.current.classList.remove ('fadeOut');
-            menuBtnDarkRef.current.classList.add ('fadeIn');
+            Object.keys(lights).forEach(key => {
+              const element = lights[key].current;
+              element.classList.remove('fadeIn');
+              element.classList.add('fadeOut');
+            })
+            Object.keys(darks).forEach(key => {
+              const element = darks[key].current;
+              element.classList.remove('fadeOut');
+              element.classList.add('fadeIn');
+            })
         } else {
             setTheme('light');
-            sunRef.current.classList.remove ('fadeOut');
-            sunRef.current.classList.add ('fadeIn');
-            moonRef.current.classList.remove ('fadeIn');
-            moonRef.current.classList.add ('fadeOut');
-            menuBtnLightRef.current.classList.remove ('fadeOut');
-            menuBtnLightRef.current.classList.add ('fadeIn');
-            menuBtnDarkRef.current.classList.remove ('fadeIn');
-            menuBtnDarkRef.current.classList.add ('fadeOut');
+            Object.keys(lights).forEach(key => {
+              const element = lights[key].current;
+              element.classList.remove('fadeOut');
+              element.classList.add('fadeIn');
+            })
+            Object.keys(darks).forEach(key => {
+              const element = darks[key].current;
+              element.classList.remove('fadeIn');
+              element.classList.add('fadeOut');
+            })
         }
-      }
+      };
 
     return (
         <section className="Header">
