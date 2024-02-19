@@ -11,13 +11,19 @@ html, body {
   background-color: #fff;
 }
 
+.App {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 20000;
+}
+
 .Header {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 70px;
-  background-color: #fff;
   z-index: 10002;
 }
 
@@ -29,12 +35,11 @@ html, body {
   align-items: center;
   margin: auto;
   padding: 20px;
-  background-color: #fff;
   z-index: 10002;
 }
-.AboutIcon {
+.About .logo {
   margin: 0 10px;
-  color: #333;
+  filter: drop-shadow(0 0 10px #fff);
 }
 
 .Footer {
@@ -43,10 +48,34 @@ html, body {
   justify-content: flex-end;
   align-items: flex-end;
   right: 50px;
-  background-color: #fff;
   z-index: 10002;
 }
 .FooterIcon {
   margin: 0 10px;
   color: #333;
+}
+
+.lightBg {
+  animation: bgLight 1s forwards;
+}
+
+.darkBg {
+  animation: bgDark 1s forwards;
+}
+
+@keyframes bgDark {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes bgLight {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #fff;
+  }
 }/*# sourceMappingURL=App.css.map */
