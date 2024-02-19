@@ -27,6 +27,13 @@ export default function Footer() {
         <footer className="Footer">
             {/* Contact me */}
             {/* links to LinkedIn and GitHub */}
+            <HStack>
+                {links.map((link, index) => (
+                    <Link key={index} href={link.url} isExternal>
+                        <FontAwesomeIcon className="FooterIcon" icon={link.icon} size="2x" />
+                    </Link>
+                ))}
+            </HStack>
         </footer>
     );
 };

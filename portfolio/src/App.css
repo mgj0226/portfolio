@@ -9,4 +9,44 @@ html, body {
   line-height: 1.5;
   color: #333;
   background-color: #fff;
+}
+
+.Header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  background-color: #fff;
+  z-index: 10002;
+}
+
+.About {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  z-index: 10002;
+}
+.AboutIcon {
+  margin: 0 10px;
+  color: #333;
+}
+
+.Footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 50px;
+  background-color: #fff;
+  z-index: 10002;
+}
+.FooterIcon {
+  margin: 0 10px;
+  color: #333;
 }/*# sourceMappingURL=App.css.map */

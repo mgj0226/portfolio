@@ -15,9 +15,6 @@ function App() {
         setTheme={setTheme}/>
       <About/>
       <Footer/>
-      <p>
-        Theme: {theme}
-      </p>
     </>
   );
 }

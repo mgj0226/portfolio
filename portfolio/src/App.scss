@@ -12,3 +12,44 @@ html, body {
   color: $text-color;
   background-color: $background-color;
 }
+
+.Header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  background-color: $background-color;
+  z-index: 10002;
+}
+
+.About {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  background-color: $background-color;
+  z-index: 10002;
+  &Icon {
+    margin: 0 10px;
+    color: $text-color;
+  }
+
+}
+
+.Footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  right: 50px;
+  background-color: $background-color;
+  z-index: 10002;
+  &Icon {
+    margin: 0 10px;
+    color: $text-color;
+  }
+}
