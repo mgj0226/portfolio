@@ -20,10 +20,11 @@
 }
 
 .MenuBtn {
+    opacity: 0;
     position: absolute;
     display: inline-block;
     top: 20px;
-    left: 20px;
+    left: -200px;
     cursor: pointer;
     filter: drop-shadow(-2px 2px 3px rgb(0 0 0 / 0.4));
     & input {
@@ -101,5 +102,12 @@
     }
     100% {
         filter: drop-shadow(-2px 2px 3px #000000);
+    }
+}
+
+@media (max-width: 768px) {
+    .MenuBtn {
+        opacity: 1;
+        left: 20px;
     }
 }
