@@ -32,14 +32,47 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  height: 400px;
   margin: auto;
   padding: 20px;
   z-index: 10002;
 }
 .About .logo {
-  margin: 0 10px;
+  position: fixed;
+  margin-left: 19px;
+  top: 83px;
   filter: drop-shadow(0 0 10px #fff);
+  z-index: 10000;
+}
+.About .logo:hover {
+  cursor: pointer;
+}
+.About .photo {
+  position: fixed;
+  top: 50px;
+  filter: drop-shadow(0 0 10px #fff);
+  z-index: 9999;
+}
+.AboutArticle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 100px;
+  z-index: 10002;
+}
+.AboutArticleTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.AboutArticleText {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .Footer {
@@ -56,14 +89,14 @@ html, body {
 }
 
 .lightBg {
-  animation: bgLight 1s forwards;
+  animation: lightBg 1s forwards;
 }
 
 .darkBg {
-  animation: bgDark 1s forwards;
+  animation: darkBg 1s forwards;
 }
 
-@keyframes bgDark {
+@keyframes darkBg {
   0% {
     background-color: #fff;
   }
@@ -71,7 +104,7 @@ html, body {
     background-color: #000;
   }
 }
-@keyframes bgLight {
+@keyframes lightBg {
   0% {
     background-color: #000;
   }
