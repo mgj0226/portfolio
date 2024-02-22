@@ -41,12 +41,15 @@ html, body {
   z-index: 10002;
   .logo {
     position: fixed;
+    display: inline-block;
     margin-left: 19px;
     top: 83px;
+    cursor: pointer;
     filter: drop-shadow(0 0 10px $background-color);
     z-index: 10000;
+    transition: all 0.3s ease;
     &:hover {
-      cursor: pointer;
+      transform: scale(1.1);
     }
   }
   .photo {
@@ -61,33 +64,40 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 47ch;
     margin-left: 20px;
     margin-top: 100px;
     z-index: 10002;
-    &Title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    &Text {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
+  }
+  &Title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  &Text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0;
   }
 
 }
 
 .Footer {
-  position: relative;
+  position: absolute;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  right: 50px;
+  right: 30px;
+  bottom: 30px;
   z-index: 10002;
   &Icon {
     margin: 0 10px;
     color: $text-color;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -102,17 +112,27 @@ html, body {
 @keyframes darkBg {
   0% {
     background-color: $background-color;
+    color: $text-color;
   }
   100% {
     background-color: $dark-background-color;
+    color: $background-color;
   }
 }
 
 @keyframes lightBg {
   0% {
     background-color: $dark-background-color;
+    color: $background-color;
   }
   100% {
     background-color: $background-color;
+    color: $text-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    bottom: 20000px;
   }
 }

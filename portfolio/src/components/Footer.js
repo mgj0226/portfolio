@@ -24,9 +24,7 @@ const links = [
 
 export default function Footer() {
     return (
-        <footer className="Footer">
-            {/* Contact me */}
-            {/* links to LinkedIn and GitHub */}
+        <Box className="Footer">
             <HStack>
                 {links.map((link, index) => (
                     <Link key={index} href={link.url} isExternal>
@@ -34,6 +32,6 @@ export default function Footer() {
                     </Link>
                 ))}
             </HStack>
-        </footer>
+        </Box>
     );
 };
