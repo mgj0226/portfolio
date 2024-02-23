@@ -244,8 +244,16 @@ html, body {
   }
 
   .Projects {
-    min-height: 40em;
+    min-height: 55em;
     margin: 5em;
+  }
+
+  .Project {
+    grid-template-columns: repeat(1, 1fr);
+    &box {
+      height: 10em;
+      width: 20em;
+    }
   }
 
   .Certificates {
