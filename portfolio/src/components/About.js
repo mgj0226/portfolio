@@ -16,8 +16,10 @@ const About = () => {
 
     return (
         <section className="About">
-          <img src={logo} className="logo" alt="logo" ref={logoRef} onClick={handleClick}/>
-          <img src={photo} className="photo" alt="photo" />
+          <div className='AboutImages'>
+            <img src={logo} className="logo" alt="logo" ref={logoRef} onClick={handleClick}/>
+            <img src={photo} className="photo" alt="photo" />
+          </div>
           <article className='AboutArticle'>
             <h2 className='AboutTitle'>Hello there</h2>
             <p className='AboutText'>

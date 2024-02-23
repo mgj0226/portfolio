@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import About from "./components/About";
 import './App.css';
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
+import Blog from "./components/Blog";
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -24,6 +27,9 @@ function App() {
         theme={theme}
         setTheme={setTheme}/>
       <About/>
+      <Projects/>
+      <Certificates/>
+      <Blog/>
       <Footer/>
     </div>
   );

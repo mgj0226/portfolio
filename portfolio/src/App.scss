@@ -1,8 +1,6 @@
 @import "variables";
 
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -14,36 +12,53 @@ html, body {
 }
 
 .App {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-rows: 1fr 3fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "about projects projects"
+    "about certificates blog"
+    "footer footer footer";
+  gap: 10px;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
   overflow-x: hidden;
   z-index: 20000;
 }
 
 .Header {
-  position: relative;
+  grid-area: header;
+  position: absolute;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 70px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 0px;
   z-index: 10002;
 }
 
 .About {
+  grid-area: about;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  height: 400px;
-  margin: auto;
-  padding: 20px;
+  align-items: flex-end;
+  min-height: 40em;
+  min-width: 21em;
+  // max-width: 55ch;
+  margin: 0 5em;
+  border-radius: 2% 2% 15% 2%;
+  padding: 1em;
   z-index: 10002;
+  box-shadow: inset 0 0 10px $bento-color;
   .logo {
-    position: fixed;
+    position: relative;
     display: inline-block;
-    margin-left: 19px;
-    top: 83px;
+    margin-right: -119px;
+    margin-left: 2em;
+    top: 0;
     cursor: pointer;
     filter: drop-shadow(0 0 10px $background-color);
     z-index: 10000;
@@ -53,8 +68,9 @@ html, body {
     }
   }
   .photo {
-    position: fixed;
-    top: 50px;
+    position: relative;
+    top: 3px;
+    margin-left: 0;
     filter: drop-shadow(0 0 10px $background-color);
     z-index: 9999;
   }
@@ -64,9 +80,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 47ch;
-    margin-left: 20px;
-    margin-top: 100px;
+    max-width: 47ch;
+    margin: 0 2em;
     z-index: 10002;
   }
   &Title {
@@ -79,10 +94,56 @@ html, body {
     font-weight: 400;
     margin-bottom: 0;
   }
+}
+
+.Projects {
+  grid-area: projects;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 15em;
+  min-width: 30em;
+  margin-right: 2em;
+  border-radius: 2% 2% 15% 2%;
+  padding: 20px;
+  z-index: 10002;
+  box-shadow: inset 0 0 10px $bento-color;
+}
+
+.Certificates {
+  grid-area: certificates;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 11em;
+  border-radius: 2% 2% 15% 2%;
+  padding: 20px;
+  z-index: 10002;
+  box-shadow: inset 0 0 10px $bento-color;
+}
+
+.Blog {
+  grid-area: blog;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 11em;
+  margin-right: 2em;
+  border-radius: 2% 2% 15% 2%;
+  padding: 20px;
+  z-index: 10002;
+  box-shadow: inset 0 0 10px $bento-color;
 
 }
 
 .Footer {
+  grid-area: footer;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -93,7 +154,7 @@ html, body {
   z-index: 10002;
   &Icon {
     margin: 0 10px;
-    color: $text-color;
+    color: $bento-color;
     transition: all 0.3s ease;
     &:hover {
       transform: scale(1.1);
@@ -131,7 +192,34 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .About {
+    justify-content: center;
+    align-items: center;
+    min-height: 40em;
+    margin: 5em;
+  }
+
+  .Projects {
+    min-height: 40em;
+    margin: 5em;
+  }
+
+  .Certificates {
+    min-height: 40em;
+    margin: 5em;
+  }
+
+  .Blog {
+    min-height: 40em;
+    margin: 5em;
+  }
+
   .Footer {
     bottom: 20000px;
   }
