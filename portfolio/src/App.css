@@ -39,13 +39,13 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  min-height: 28em;
+  min-height: 40em;
   min-width: 21em;
   margin: 0.5em 0em 5em 5em;
   border-radius: 2% 2% 15% 2%;
   padding: 1em;
   z-index: 10002;
-  box-shadow: inset 0 0 10px #333;
+  box-shadow: inset 0 0 20px #333;
 }
 .About .logo {
   position: relative;
@@ -75,7 +75,8 @@ html, body {
   justify-content: center;
   align-items: flex-start;
   max-width: 47ch;
-  margin: 0 2em;
+  margin-left: 1em;
+  margin-right: 5em;
   z-index: 10002;
 }
 .AboutTitle {
@@ -93,7 +94,7 @@ html, body {
   grid-area: projects;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 15em;
@@ -103,7 +104,41 @@ html, body {
   border-radius: 2% 2% 15% 2%;
   padding: 20px;
   z-index: 10002;
+  box-shadow: inset 0 0 20px #333;
+}
+
+.Project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.Projectbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9em;
+  width: 18em;
+  margin: 1em;
   box-shadow: inset 0 0 10px #333;
+  border-radius: 10%;
+  cursor: pointer;
+  z-index: 11000;
+  transition: all 0.3s ease;
+}
+.Projectbox:hover {
+  transform: scale(1.1);
+}
+.ProjectImgs {
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  gap: 0.2em;
+}
+.ProjectImgs img {
+  max-height: 3em;
+  border-radius: 10%;
 }
 
 .Certificates {
@@ -118,7 +153,7 @@ html, body {
   margin-bottom: 5em;
   padding: 20px;
   z-index: 10002;
-  box-shadow: inset 0 0 10px #333;
+  box-shadow: inset 0 0 20px #333;
 }
 
 .Blog {
@@ -134,7 +169,7 @@ html, body {
   border-radius: 2% 2% 15% 2%;
   padding: 20px;
   z-index: 10002;
-  box-shadow: inset 0 0 10px #333;
+  box-shadow: inset 0 0 20px #333;
 }
 
 .Footer {
@@ -145,11 +180,11 @@ html, body {
   justify-content: flex-end;
   align-items: flex-end;
   right: 3em;
-  bottom: 30px;
+  bottom: 2em;
   z-index: 10002;
 }
 .FooterIcon {
-  margin: 0 10px;
+  margin: 0 0.5em;
   color: #333;
   transition: all 0.3s ease;
 }
