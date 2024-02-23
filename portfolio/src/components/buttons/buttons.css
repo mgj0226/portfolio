@@ -1,7 +1,7 @@
 .DarkModeSwitch {
   position: relative;
   display: inline-block;
-  top: 20px;
+  top: 1em;
   right: 3em;
   cursor: pointer;
   opacity: 0.7;
