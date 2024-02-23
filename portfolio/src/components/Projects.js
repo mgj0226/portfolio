@@ -5,7 +5,7 @@ import LemonBooking1 from '../assets/LemonBooking1.png';
 const Projects = () => {
     return (
         <section className="Projects">
-        <h1>Projects</h1>
+        <h1 className='ProjectsTitle'>Projects</h1>
         <div className="Project">
             <div className="Projectbox">
                 <h3>Little Lemon</h3>

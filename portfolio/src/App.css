@@ -95,9 +95,8 @@ html, body {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-height: 15em;
   min-width: 21em;
   margin-top: 0.5em;
   margin-right: 2em;
@@ -105,6 +104,12 @@ html, body {
   padding: 20px;
   z-index: 10002;
   box-shadow: inset 0 0 20px #333;
+}
+.ProjectsTitle {
+  cursor: pointer;
+}
+.ProjectsTitle:hover {
+  transform: scale(1.1);
 }
 
 .Project {
@@ -147,7 +152,7 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 11em;
   border-radius: 2% 2% 15% 2%;
   margin-bottom: 5em;
@@ -162,7 +167,7 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 11em;
   margin-right: 2em;
   margin-bottom: 5em;
@@ -232,8 +237,12 @@ html, body {
     margin: 5em;
   }
   .Projects {
-    min-height: 55em;
+    overflow: auto;
+    min-height: 40em;
     margin: 5em;
+  }
+  .ProjectsTitle {
+    margin-top: 1em;
   }
   .Project {
     grid-template-columns: repeat(1, 1fr);
