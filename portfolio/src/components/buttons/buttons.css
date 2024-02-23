@@ -1,8 +1,8 @@
 .DarkModeSwitch {
-  position: absolute;
+  position: relative;
   display: inline-block;
   top: 20px;
-  right: 20px;
+  right: 3em;
   cursor: pointer;
   opacity: 0.7;
   transition: all 0.3s ease;
@@ -18,7 +18,7 @@
 }
 
 .MenuBtn {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   top: -20000px;
   left: 20px;
@@ -105,7 +105,7 @@
     filter: drop-shadow(-2px 2px 3px #000000);
   }
 }
-@media (max-width: 1080px) {
+@media (max-width: 1150px) {
   .MenuBtn {
     top: 20px;
   }
