@@ -1,11 +1,27 @@
+import React, {useRef} from 'react';
 import LemonHome1 from '../assets/LemonHome1.png';
 import LemonHome2 from '../assets/LemonHome2.png';
 import LemonBooking1 from '../assets/LemonBooking1.png';
 
-const Projects = () => {
+const Projects = ( {page, setPage, setPageChange} ) => {
+    const handleTitleClick = () => {
+        if (page !== 'projectsSelect') {
+            setPageChange(true);
+            setTimeout(() => {
+                setPage('projectsSelect');
+            }, 500);
+        } else {
+            setPageChange(true);
+            setTimeout(() => {
+                setPage('homeSelect');
+            }, 500);
+        };
+    }
+
+
     return (
         <section className="Projects">
-        <h1 className='ProjectsTitle'>Projects</h1>
+        <h1 className='ProjectsTitle' onClick={handleTitleClick}>Projects</h1>
         <div className="Project">
             <div className="Projectbox">
                 <h3>Little Lemon</h3>

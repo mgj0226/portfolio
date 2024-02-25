@@ -205,6 +205,10 @@ html, body {
   animation: darkBg 1s forwards;
 }
 
+.projectsSelect {
+  animation: projectsSelect 1s forwards;
+}
+
 @keyframes darkBg {
   0% {
     background-color: #fff;
@@ -225,6 +229,14 @@ html, body {
     color: #000;
   }
 }
+@keyframes projectsSelect {
+  0% {
+    grid-template-areas: "header header header" "about projects projects" "about certificates blog" "footer footer footer";
+  }
+  100% {
+    grid-template-areas: "header header header" "projects projects projects" "projects projects projects" "footer footer footer";
+  }
+}
 @media (max-width: 1150px) {
   .App {
     display: flex;
@@ -240,6 +252,10 @@ html, body {
     overflow: auto;
     min-height: 40em;
     margin: 5em;
+    scrollbar-width: none;
+  }
+  .Projects ::-webkit-scrollbar {
+    display: none;
   }
   .ProjectsTitle {
     margin-top: 1em;

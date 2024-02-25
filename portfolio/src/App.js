@@ -11,6 +11,10 @@ import Blog from "./components/Blog";
 function App() {
   const [theme, setTheme] = useState('light');
   const [themeBg, setThemeBg] = useState('lightBg');
+  const [page, setPage] = useState('homeSelect');
+  const [pageChange, setPageChange] = useState(false);
+
+  const pages = ['homeSelect', 'projectsSelect', 'certificatesSelect', 'blogSelect'];
 
   useEffect(() => {
     if (theme === 'light') {
@@ -18,16 +22,25 @@ function App() {
     } else {
       setThemeBg('darkBg');
     }
-  }, [theme]);
+    if (pageChange === true) {
+      setTimeout(() => {
+        setPageChange(false);
+      }, 500);
+    }
+  }, [theme, pageChange]);
 
 
   return (
-    <div className={`App ${themeBg}`}>
+    <div className={`App ${themeBg} ${page}`}>
       <Header
         theme={theme}
         setTheme={setTheme}/>
       <About/>
-      <Projects/>
+      <Projects
+        page={page}
+        setPage={setPage}
+        setPageChange={setPageChange}
+      />
       <Certificates/>
       <Blog/>
       <Footer/>
