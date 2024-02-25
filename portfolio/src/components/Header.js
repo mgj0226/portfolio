@@ -24,7 +24,7 @@ const Header = ({theme, setTheme}) => {
         }
       const darks = {
           moon: moonRef,
-          menuBtnDark: menuBtnDarkRef
+          menuBtnDark: menuBtnDarkRef,
         }
 
 

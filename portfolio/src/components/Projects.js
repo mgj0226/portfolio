@@ -3,24 +3,26 @@ import LemonHome1 from '../assets/LemonHome1.png';
 import LemonHome2 from '../assets/LemonHome2.png';
 import LemonBooking1 from '../assets/LemonBooking1.png';
 
-const Projects = ( {page, setPage, setPageChange} ) => {
+const Projects = ( {page, setPage} ) => {
+    if (page === 'Projects') {
+        var scale = 'scaleMax';
+    } else if (page === 'About') {
+        scale = 'scaleIn';
+    } else {
+        scale = 'scaleOut';
+    }
     const handleTitleClick = () => {
-        if (page !== 'projectsSelect') {
-            setPageChange(true);
-            setTimeout(() => {
-                setPage('projectsSelect');
-            }, 500);
+        if (page !== 'Projects') {
+                setPage('Projects');
         } else {
-            setPageChange(true);
-            setTimeout(() => {
-                setPage('homeSelect');
-            }, 500);
+                setPage('About');
         };
     }
 
 
     return (
-        <section className="Projects">
+        <section
+            className={`Projects ${scale}`}>
         <h1 className='ProjectsTitle' onClick={handleTitleClick}>Projects</h1>
         <div className="Project">
             <div className="Projectbox">

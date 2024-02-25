@@ -213,8 +213,16 @@ html, body {
   animation: darkBg 1s forwards;
 }
 
-.projectsSelect {
-  animation: projectsSelect 1s forwards;
+.scaleIn {
+  animation: scaleIn 1s forwards;
+}
+
+.scaleOut {
+  animation: scaleOut 1s forwards;
+}
+
+.scaleMax {
+  animation: scaleMax 1s forwards;
 }
 
 @keyframes darkBg {
@@ -239,20 +247,30 @@ html, body {
   }
 }
 
-@keyframes projectsSelect {
+@keyframes scaleIn {
   0% {
-    grid-template-areas:
-      "header header header"
-      "about projects projects"
-      "about certificates blog"
-      "footer footer footer";
+    transform: scale(0);
   }
   100% {
-    grid-template-areas:
-      "header header header"
-      "projects projects projects"
-      "projects projects projects"
-      "footer footer footer";
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaleMax {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }
 
