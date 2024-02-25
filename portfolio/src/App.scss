@@ -252,6 +252,7 @@ html, body {
     overflow: auto;
     min-height: 40em;
     margin: 5em;
+    scrollbar-width: none;
     &Title {
       margin-top: 1em;
     }
