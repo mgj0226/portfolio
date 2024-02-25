@@ -253,6 +253,9 @@ html, body {
     min-height: 40em;
     margin: 5em;
     scrollbar-width: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
     &Title {
       margin-top: 1em;
     }

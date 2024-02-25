@@ -242,6 +242,9 @@ html, body {
     margin: 5em;
     scrollbar-width: none;
   }
+  .Projects ::-webkit-scrollbar {
+    display: none;
+  }
   .ProjectsTitle {
     margin-top: 1em;
   }
