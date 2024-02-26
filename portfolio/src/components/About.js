@@ -2,7 +2,12 @@ import React, { useRef } from 'react';
 import logo from '../assets/wolfLogo2.svg';
 import photo from '../assets/photo.svg';
 
-const About = () => {
+const About = ( {page, setPage}) => {
+  if (page === 'About') {
+    var scale = 'scaleIn';
+  } else {
+    scale = 'scaleOut';
+  }
   const logoRef = useRef(null);
 
   const handleClick = () => {
@@ -15,7 +20,7 @@ const About = () => {
   }
 
     return (
-        <section className="About">
+        <section className={`About ${scale}`}>
           <div className='AboutImages'>
             <img src={logo} className="logo" alt="logo" ref={logoRef} onClick={handleClick}/>
             <img src={photo} className="photo" alt="photo" />

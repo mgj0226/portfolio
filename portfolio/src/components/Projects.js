@@ -1,11 +1,29 @@
+import React, {useRef} from 'react';
 import LemonHome1 from '../assets/LemonHome1.png';
 import LemonHome2 from '../assets/LemonHome2.png';
 import LemonBooking1 from '../assets/LemonBooking1.png';
 
-const Projects = () => {
+const Projects = ( {page, setPage} ) => {
+    if (page === 'Projects') {
+        var scale = 'ProjectsMax';
+    } else if (page === 'About') {
+        scale = 'scaleIn';
+    } else {
+        scale = 'scaleOut';
+    }
+    const handleTitleClick = () => {
+        if (page !== 'Projects') {
+                setPage('Projects');
+        } else {
+                setPage('About');
+        };
+    }
+
+
     return (
-        <section className="Projects">
-        <h1 className='ProjectsTitle'>Projects</h1>
+        <section
+            className={`Projects ${scale}`}>
+        <h1 className='ProjectsTitle' onClick={handleTitleClick}>Projects</h1>
         <div className="Project">
             <div className="Projectbox">
                 <h3>Little Lemon</h3>

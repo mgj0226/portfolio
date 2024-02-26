@@ -166,6 +166,12 @@ html, body {
   padding: 20px;
   z-index: 10002;
   box-shadow: inset 0 0 20px $bento-color;
+  &Title {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .Blog {
@@ -182,7 +188,12 @@ html, body {
   padding: 20px;
   z-index: 10002;
   box-shadow: inset 0 0 20px $bento-color;
-
+  &Title {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .Footer {
@@ -213,6 +224,26 @@ html, body {
   animation: darkBg 1s forwards;
 }
 
+.scaleIn {
+  animation: scaleIn 1s forwards;
+}
+
+.scaleOut {
+  animation: scaleOut 1s forwards;
+}
+
+.ProjectsMax {
+  animation: ProjectsMax 1s forwards;
+}
+
+.CertificatesMax {
+  animation: CertificatesMax 1s forwards;
+}
+
+.BlogMax {
+  animation: BlogMax 1s forwards;
+}
+
 @keyframes darkBg {
   0% {
     background-color: $background-color;
@@ -232,6 +263,52 @@ html, body {
   100% {
     background-color: $background-color;
     color: $text-color;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes ProjectsMax {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.5) translate(-15em, 5em);
+
+  }
+}
+
+@keyframes CertificatesMax {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(3) translate(-2em, -5em);
+  }
+}
+
+@keyframes BlogMax {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(3) translate(-13em, -5em);
   }
 }
 
