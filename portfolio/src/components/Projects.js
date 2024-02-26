@@ -5,7 +5,7 @@ import LemonBooking1 from '../assets/LemonBooking1.png';
 
 const Projects = ( {page, setPage} ) => {
     if (page === 'Projects') {
-        var scale = 'scaleMax';
+        var scale = 'ProjectsMax';
     } else if (page === 'About') {
         scale = 'scaleIn';
     } else {

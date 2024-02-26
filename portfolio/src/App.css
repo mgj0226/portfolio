@@ -160,6 +160,12 @@ html, body {
   z-index: 10002;
   box-shadow: inset 0 0 20px #333;
 }
+.CertificatesTitle {
+  cursor: pointer;
+}
+.CertificatesTitle:hover {
+  transform: scale(1.1);
+}
 
 .Blog {
   grid-area: blog;
@@ -175,6 +181,12 @@ html, body {
   padding: 20px;
   z-index: 10002;
   box-shadow: inset 0 0 20px #333;
+}
+.BlogTitle {
+  cursor: pointer;
+}
+.BlogTitle:hover {
+  transform: scale(1.1);
 }
 
 .Footer {
@@ -213,8 +225,16 @@ html, body {
   animation: scaleOut 1s forwards;
 }
 
-.scaleMax {
-  animation: scaleMax 1s forwards;
+.ProjectsMax {
+  animation: ProjectsMax 1s forwards;
+}
+
+.CertificatesMax {
+  animation: CertificatesMax 1s forwards;
+}
+
+.BlogMax {
+  animation: BlogMax 1s forwards;
 }
 
 @keyframes darkBg {
@@ -253,12 +273,28 @@ html, body {
     transform: scale(0);
   }
 }
-@keyframes scaleMax {
+@keyframes ProjectsMax {
   0% {
-    transform: scale(1);
+    transform: scale(1) translate(0, 0);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.5) translate(-15em, 5em);
+  }
+}
+@keyframes CertificatesMax {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(3) translate(-2em, -5em);
+  }
+}
+@keyframes BlogMax {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(3) translate(-13em, -5em);
   }
 }
 @media (max-width: 1150px) {
