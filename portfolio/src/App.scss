@@ -12,6 +12,7 @@ html, body {
 }
 
 .App {
+  position: relative;
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
   grid-template-rows: 1fr 3fr 2fr 1fr;
@@ -24,7 +25,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  z-index: 20000;
+  z-index: 10000;
 }
 
 .Header {
@@ -35,7 +36,17 @@ html, body {
   align-items: flex-end;
   width: 100%;
   margin-bottom: 0px;
-  z-index: 10002;
+  z-index: 10003;
+  .menuBg {
+    position: fixed;
+    top: -2000px;
+    left: 1vw;
+    width: 95vw;
+    height: 95vh;
+    border-radius: 5%;
+    background-color: $bento-color;
+    z-index: 10000;
+  }
 }
 
 .About {
@@ -205,7 +216,7 @@ html, body {
   align-items: flex-end;
   right: 3em;
   bottom: 2em;
-  z-index: 10002;
+  z-index: 10004;
   &Icon {
     margin: 0 0.5em;
     color: $bento-color;
@@ -214,6 +225,14 @@ html, body {
       transform: scale(1.1);
     }
   }
+}
+
+.menuOpen {
+  animation: menuOpen 1s forwards;
+}
+
+.menuClose {
+  animation: menuClose 1s forwards;
 }
 
 .lightBg {
@@ -242,6 +261,24 @@ html, body {
 
 .BlogMax {
   animation: BlogMax 1s forwards;
+}
+
+@keyframes menuOpen {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2010px);
+  }
+}
+
+@keyframes menuClose {
+  0% {
+    transform: translateY(2010px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes darkBg {
@@ -357,6 +394,11 @@ html, body {
   }
 
   .Footer {
-    bottom: 20000px;
-  }
+    position: fixed;
+    bottom: 2070px;
+    &Icon {
+      color: $background-color;
+      z-index: 10005;
+    }
+    }
 }

@@ -11,6 +11,7 @@ import Blog from "./components/Blog";
 function App() {
   const [theme, setTheme] = useState('light');
   const [themeBg, setThemeBg] = useState('lightBg');
+  const [menu, setMenu] = useState('menuClose');
   const [page, setPage] = useState('About');
 
   useEffect(() => {
@@ -26,7 +27,10 @@ function App() {
     <div className={`App ${themeBg}`}>
       <Header
         theme={theme}
-        setTheme={setTheme}/>
+        setTheme={setTheme}
+        menu={menu}
+        setMenu={setMenu}
+        />
       <About
         page={page}
         setPage={setPage}
@@ -43,7 +47,10 @@ function App() {
         page={page}
         setPage={setPage}
       />
-      <Footer/>
+      <Footer
+        menu={menu}
+        setMenu={setMenu}
+      />
     </div>
   );
 }

@@ -2,18 +2,17 @@ import React, {useState, useRef} from "react";
 import MenuBtn from "./buttons/MenuBtn";
 import DarkModeSwitch from "./buttons/darkModeSwitch3";
 
-const Header = ({theme, setTheme}) => {
-    const [menuOpen, setMenuOpen] = useState('closed');
+const Header = ({menu, setMenu, theme, setTheme}) => {
     const sunRef = useRef(null);
     const moonRef = useRef(null);
     const menuBtnLightRef = useRef(null);
     const menuBtnDarkRef = useRef(null);
 
     const toggleMenu = () => {
-        if (menuOpen === 'closed') {
-          setMenuOpen('open');
+        if (menu === 'menuClose') {
+          setMenu('menuOpen');
         } else {
-          setMenuOpen('closed');
+          setMenu('menuClose');
         }
       }
 
@@ -62,12 +61,13 @@ const Header = ({theme, setTheme}) => {
             <input
                 type="checkbox"
                 id="toggle"
-                checked={menuOpen ==="open"}
+                checked={menu ==="menuOpen"}
                 onChange={toggleMenu}/>
             <MenuBtn
               theme={theme}
               menuBtnLightRef={menuBtnLightRef}
               menuBtnDarkRef={menuBtnDarkRef}/></label>
+            <div className={`menuBg ${menu}`}></div>
             <label className="DarkModeSwitch">
             <input
                 type="checkbox"
@@ -76,7 +76,7 @@ const Header = ({theme, setTheme}) => {
                 onChange={toggleTheme}/>
                 <DarkModeSwitch
                 className="darkModeSwitch"
-                theme={theme}
+                menu={menu}
                 sunRef={sunRef}
                 moonRef={moonRef}/></label>
         </section>

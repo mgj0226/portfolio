@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import LemonHome1 from '../assets/LemonHome1.png';
 import LemonHome2 from '../assets/LemonHome2.png';
 import LemonBooking1 from '../assets/LemonBooking1.png';
@@ -40,7 +40,7 @@ const Projects = ( {page, setPage} ) => {
                 <h3>Coming Soon</h3>
             </div>
             <div className="Projectbox">
-                <h3>More</h3>
+                <h3>Coming Soon</h3>
             </div>
         </div>
         </section>

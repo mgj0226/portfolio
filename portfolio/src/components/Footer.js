@@ -1,3 +1,4 @@
+import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
@@ -22,13 +23,13 @@ const links = [
     },
 ];
 
-export default function Footer() {
+export default function Footer({menu}) {
     return (
-        <Box className="Footer">
+        <Box className={`Footer ${menu}`}>
             <HStack>
                 {links.map((link, index) => (
                     <Link key={index} href={link.url} isExternal>
-                        <FontAwesomeIcon className="FooterIcon" icon={link.icon} size="2x" />
+                        <FontAwesomeIcon className={`FooterIcon`} icon={link.icon} size="2x" />
                     </Link>
                 ))}
             </HStack>
