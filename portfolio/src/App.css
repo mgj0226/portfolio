@@ -207,7 +207,7 @@ html, body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  right: 3em;
+  right: 3.5em;
   bottom: 2em;
   z-index: 10004;
 }
@@ -354,6 +354,10 @@ html, body {
   }
   .ProjectsTitle {
     margin-top: 1em;
+    cursor: auto;
+  }
+  .ProjectsTitle:hover {
+    transform: scale(1);
   }
   .Project {
     grid-template-columns: repeat(1, 1fr);
@@ -366,9 +370,21 @@ html, body {
     min-height: 40em;
     margin: 5em;
   }
+  .CertificatesTitle {
+    cursor: auto;
+  }
+  .CertificatesTitle:hover {
+    transform: scale(1);
+  }
   .Blog {
     min-height: 40em;
     margin: 5em;
+  }
+  .BlogTitle {
+    cursor: auto;
+  }
+  .BlogTitle:hover {
+    transform: scale(1);
   }
   .Footer {
     position: fixed;
@@ -377,5 +393,45 @@ html, body {
   .FooterIcon {
     color: #fff;
     z-index: 10005;
+  }
+  @keyframes scaleIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes scaleOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes ProjectsMax {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1) translate(0em, 0em);
+    }
+  }
+  @keyframes CertificatesMax {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1) translate(0em, 0em);
+    }
+  }
+  @keyframes BlogMax {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1) translate(0em, 0em);
+    }
   }
 }/*# sourceMappingURL=App.css.map */

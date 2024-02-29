@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import MenuBtn from "./buttons/MenuBtn";
 import DarkModeSwitch from "./buttons/darkModeSwitch3";
 
@@ -15,6 +15,21 @@ const Header = ({menu, setMenu, theme, setTheme}) => {
           setMenu('menuClose');
         }
       }
+
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth > 1150) {
+          setMenu('menuClose');
+        }
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [setMenu]);
 
 
       const lights = {
