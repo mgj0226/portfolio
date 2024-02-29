@@ -22,7 +22,9 @@ const Projects = ( {page, setPage} ) => {
 
     return (
         <section
-            className={`Projects ${scale}`}>
+            className={`Projects ${scale}`}
+            id="Projects"
+        >
         <h1 className='ProjectsTitle' onClick={handleTitleClick}>Projects</h1>
         <div className="Project">
             <div className="Projectbox">

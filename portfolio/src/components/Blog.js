@@ -16,7 +16,7 @@ const Blog = ( {page, setPage} ) => {
     }
 
     return (
-        <section className={`Blog ${scale}`}>
+        <section className={`Blog ${scale}`} id="Blog">
         <h1 className="BlogTitle" onClick={handleTitleClick}>Blog</h1>
         </section>
     );

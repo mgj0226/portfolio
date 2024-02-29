@@ -16,7 +16,7 @@ const Certificates = ( {page, setPage} ) => {
     }
 
     return (
-        <section className={`Certificates ${scale}`}>
+        <section className={`Certificates ${scale}`} id="Certificates">
         <h1 className="CertificatesTitle" onClick={handleTitleClick}>Skills and Certificates</h1>
         </section>
     )

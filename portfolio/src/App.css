@@ -34,6 +34,11 @@ html, body {
 }
 .Header .menuBg {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
   top: -2000px;
   left: 1vw;
   width: 95vw;
@@ -41,6 +46,13 @@ html, body {
   border-radius: 5%;
   background-color: #333;
   z-index: 10000;
+}
+.Header .menuBg .menuOptions {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .About {

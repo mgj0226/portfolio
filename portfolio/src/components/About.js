@@ -20,7 +20,7 @@ const About = ( {page, setPage}) => {
   }
 
     return (
-        <section className={`About ${scale}`}>
+        <section className={`About ${scale}`} id='About'>
           <div className='AboutImages'>
             <img src={logo} className="logo" alt="logo" ref={logoRef} onClick={handleClick}/>
             <img src={photo} className="photo" alt="photo" />

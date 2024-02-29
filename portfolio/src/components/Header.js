@@ -16,6 +16,11 @@ const Header = ({menu, setMenu, theme, setTheme}) => {
         }
       }
 
+    const handleOptionClick = (id) => {
+      setMenu('menuClose');
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    };
+
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth > 1150) {
@@ -82,7 +87,12 @@ const Header = ({menu, setMenu, theme, setTheme}) => {
               theme={theme}
               menuBtnLightRef={menuBtnLightRef}
               menuBtnDarkRef={menuBtnDarkRef}/></label>
-            <div className={`menuBg ${menu}`}></div>
+            <div className={`menuBg ${menu}`}>
+              <a className="menuOptions" onClick={() => handleOptionClick("About")}>About</a>
+              <a className="menuOptions" onClick={() => handleOptionClick("Projects")}>Projects</a>
+              <a className="menuOptions" onClick={() => handleOptionClick("Certificates")}>Certificates</a>
+              <a className="menuOptions" onClick={() => handleOptionClick("Blog")}>Blog</a>
+            </div>
             <label className="DarkModeSwitch">
             <input
                 type="checkbox"

@@ -39,6 +39,11 @@ html, body {
   z-index: 10003;
   .menuBg {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
     top: -2000px;
     left: 1vw;
     width: 95vw;
@@ -46,6 +51,13 @@ html, body {
     border-radius: 5%;
     background-color: $bento-color;
     z-index: 10000;
+    .menuOptions {
+      text-decoration: none;
+      color: $background-color;
+      font-family: "Montserrat", sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+    }
   }
 }
 
