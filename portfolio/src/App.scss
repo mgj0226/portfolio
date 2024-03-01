@@ -128,6 +128,11 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  overflow: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   min-width: 21em;
   margin-top: 0.5em;
   margin-right: 2em;
@@ -181,9 +186,14 @@ html, body {
   grid-area: certificates;
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   min-height: 11em;
   border-radius: 2% 2% 15% 2%;
   margin-bottom: 5em;
@@ -196,15 +206,41 @@ html, body {
       transform: scale(1.1);
     }
   }
+  &Content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  &Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-height: 5em;
+      border-radius: 10%;
+    }
+  }
+  &Text {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
 }
 
 .Blog {
   grid-area: blog;
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   min-height: 11em;
   margin-right: 2em;
   margin-bottom: 5em;
@@ -216,6 +252,38 @@ html, body {
     cursor: pointer;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+  &Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &Box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0 0 10px $bento-color;
+      border-radius: 10%;
+      max-width: 85%;
+      img {
+        max-width: 10em;
+        border-radius: 10%;
+      }
+    }
+    &Title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    &Text {
+      max-width: 45ch;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom: 1em;
     }
   }
 }
@@ -376,13 +444,8 @@ html, body {
   }
 
   .Projects {
-    overflow: auto;
     min-height: 40em;
     margin: 5em;
-    scrollbar-width: none;
-    ::-webkit-scrollbar {
-      display: none;
-    }
     &Title {
       margin-top: 1em;
       cursor: auto;

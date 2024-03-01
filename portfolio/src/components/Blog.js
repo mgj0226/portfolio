@@ -17,7 +17,16 @@ const Blog = ( {page, setPage} ) => {
 
     return (
         <section className={`Blog ${scale}`} id="Blog">
-        <h1 className="BlogTitle" onClick={handleTitleClick}>Blog</h1>
+        <h2 className="BlogTitle" onClick={handleTitleClick}>Blog</h2>
+        <div className="BlogContent">
+            <div className="BlogContentBox">
+                <h3 className="BlogContentTitle">Ready to go - 1/3/2024</h3>
+                <p className="BlogContentText">
+                    I'm excited to start my career as a programmer!
+                    I've learnt a lot and I'm ready to put it into practice.
+                </p>
+            </div>
+        </div>
         </section>
     );
 }
