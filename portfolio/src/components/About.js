@@ -29,7 +29,7 @@ const About = ( {page, setPage}) => {
             <h2 className='AboutTitle'>Hello there</h2>
             <p className='AboutText'>
               I am Michael Chan, born in 1994 in Hong Kong.
-              I live in Wirral working as a web developer.
+              I am living in Wirral now, working as a web developer.
               I am proficient in HTML, CSS, Scss, JavaScript, and React.
             </p>
             <p className='AboutText'>
