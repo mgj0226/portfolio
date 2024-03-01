@@ -22,6 +22,9 @@ const Blog = ( {page, setPage} ) => {
             <div className="BlogContentBox">
                 <h3 className="BlogContentTitle">Ready to go - 1/3/2024</h3>
                 <p className="BlogContentText">
+                    I was in a totally different place a year ago.
+                    I was working in a job that I only work to raise my children and I was feeling stuck.
+                    I was looking for a change and I found it! <br />
                     I'm excited to start my career as a programmer!
                     I've learnt a lot and I'm ready to put it into practice.
                 </p>
