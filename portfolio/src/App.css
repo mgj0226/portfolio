@@ -43,6 +43,7 @@ html, body {
   left: 1vw;
   width: 95vw;
   height: 95vh;
+  opacity: 0.9;
   border-radius: 5%;
   background-color: #333;
   z-index: 10000;
