@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.dd1d2c30.css",
+    "main.js": "/portfolio/static/js/main.b46f40e8.js",
+    "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
+    "static/media/LemonHome1.png": "/portfolio/static/media/LemonHome1.3ef08955d079e2aa4017.png",
+    "static/media/photo.svg": "/portfolio/static/media/photo.95111a93ed8d6cc6293fbb03d6f3bc31.svg",
+    "static/media/LemonHome2.png": "/portfolio/static/media/LemonHome2.b95f9a228d681db81f8f.png",
+    "static/media/20240228_MetaFrontEndDev.png": "/portfolio/static/media/20240228_MetaFrontEndDev.2fa96c01535e301cf724.png",
+    "static/media/20230925_PY4E.jpg": "/portfolio/static/media/20230925_PY4E.43e244aa3bff4148075c.jpg",
+    "static/media/LemonBooking1.png": "/portfolio/static/media/LemonBooking1.17b8667813b79c5df0ff.png",
+    "index.html": "/portfolio/index.html",
+    "static/media/wolfLogo2.svg": "/portfolio/static/media/wolfLogo2.fbb707729746c44a04830fef002389b1.svg",
+    "main.dd1d2c30.css.map": "/portfolio/static/css/main.dd1d2c30.css.map",
+    "main.b46f40e8.js.map": "/portfolio/static/js/main.b46f40e8.js.map",
+    "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd1d2c30.css",
+    "static/js/main.b46f40e8.js"
+  ]
+}
