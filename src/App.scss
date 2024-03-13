@@ -153,11 +153,13 @@ html, body {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   &box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 9em;
     width: 18em;
     margin: 1em;
