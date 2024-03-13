@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4c09f383.css",
-    "main.js": "/portfolio/static/js/main.4fb6a62b.js",
+    "main.css": "/portfolio/static/css/main.c6921d6f.css",
+    "main.js": "/portfolio/static/js/main.5261d72d.js",
     "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
     "static/media/LemonHome1.png": "/portfolio/static/media/LemonHome1.3ef08955d079e2aa4017.png",
     "static/media/photo.svg": "/portfolio/static/media/photo.95111a93ed8d6cc6293fbb03d6f3bc31.svg",
@@ -11,12 +11,12 @@
     "static/media/LemonBooking1.png": "/portfolio/static/media/LemonBooking1.17b8667813b79c5df0ff.png",
     "index.html": "/portfolio/index.html",
     "static/media/wolfLogo2.svg": "/portfolio/static/media/wolfLogo2.fbb707729746c44a04830fef002389b1.svg",
-    "main.4c09f383.css.map": "/portfolio/static/css/main.4c09f383.css.map",
-    "main.4fb6a62b.js.map": "/portfolio/static/js/main.4fb6a62b.js.map",
+    "main.c6921d6f.css.map": "/portfolio/static/css/main.c6921d6f.css.map",
+    "main.5261d72d.js.map": "/portfolio/static/js/main.5261d72d.js.map",
     "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c09f383.css",
-    "static/js/main.4fb6a62b.js"
+    "static/css/main.c6921d6f.css",
+    "static/js/main.5261d72d.js"
   ]
 }
