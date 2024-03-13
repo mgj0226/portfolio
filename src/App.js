@@ -31,22 +31,24 @@ function App() {
         menu={menu}
         setMenu={setMenu}
         />
-      <About
-        page={page}
-        setPage={setPage}
-      />
-      <Projects
-        page={page}
-        setPage={setPage}
-      />
-      <Certificates
-        page={page}
-        setPage={setPage}
-      />
-      <Blog
-        page={page}
-        setPage={setPage}
-      />
+      <main className="Main">
+        <About
+          page={page}
+          setPage={setPage}
+        />
+        <Projects
+          page={page}
+          setPage={setPage}
+        />
+        <Certificates
+          page={page}
+          setPage={setPage}
+        />
+        <Blog
+          page={page}
+          setPage={setPage}
+        />
+      </main>
       <Footer
         menu={menu}
         setMenu={setMenu}

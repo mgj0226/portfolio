@@ -11,7 +11,7 @@ html, body {
   background-color: $background-color;
 }
 
-.App {
+.Main {
   position: relative;
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
@@ -149,9 +149,10 @@ html, body {
 }
 
 .Project {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   &box {
     display: flex;
@@ -171,6 +172,9 @@ html, body {
     }
   }
   &Imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0.5em;
