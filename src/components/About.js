@@ -29,12 +29,14 @@ const About = ( {page, setPage}) => {
             <h2 className='AboutTitle'>Hello there</h2>
             <p className='AboutText'>
               I am Michael Chan, born in 1994 in Hong Kong.
-              I am living in Wirral now, working as a web developer.
-              I am proficient in HTML, CSS, Scss, JavaScript, and React.
+              I am now living in Wirral, UK, working as a web developer.
+              I am proficient in HTML, CSS, SCSS, JavaScript, and React.
+              I am also familiar with Python and Figma.
             </p>
             <p className='AboutText'>
-              I am also familiar with Figma, Python, and SQLite.
-              I am a quick learner and always looking to expand my knowledge and skill set.
+              I am always looking to expand my knowledge and skill set.
+              I am currently attending the Meta Back-End Professional Courses.
+              I will be having much more knowledge and skills in the future.
             </p>
           </article>
 
