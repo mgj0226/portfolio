@@ -26,6 +26,8 @@ const Blog = ( {page, setPage} ) => {
                     I am excited to expand my knowledge and skill set and it's fun to learn new things.
                     I'm looking forward to the future and I'm ready to take the next step.
                 </p>
+            </div>
+            <div className="BlogContentBox">
                 <h3 className="BlogContentTitle">Ready to go - 1/3/2024</h3>
                 <p className="BlogContentText">
                     I was in a totally different place a year ago.
