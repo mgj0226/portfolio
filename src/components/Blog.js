@@ -20,6 +20,12 @@ const Blog = ( {page, setPage} ) => {
         <h2 className="BlogTitle" onClick={handleTitleClick}>Blog</h2>
         <div className="BlogContent">
             <div className="BlogContentBox">
+                <h3 className="BlogContentTitle">First steps - 13/3/2024</h3>
+                <p className="BlogContentText">
+                    I'm taking Meta Back-End Professional Courses and I'm learning a lot.
+                    I am excited to expand my knowledge and skill set and it's fun to learn new things.
+                    I'm looking forward to the future and I'm ready to take the next step.
+                </p>
                 <h3 className="BlogContentTitle">Ready to go - 1/3/2024</h3>
                 <p className="BlogContentText">
                     I was in a totally different place a year ago.
